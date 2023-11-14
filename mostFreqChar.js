@@ -7,9 +7,27 @@ You can assume that the input string is non-empty.
 */
 
 const mostFrequentChar = (s) => {
-  // todo
+	// todo
+	let obj = {};
+	let str = s.toLowerCase();
+	let freqChar = "";
+	let frequent = -Infinity;
+	for (char of str) {
+		if (!(char in obj)) {
+			obj[char] = 0;
+		}
+		obj[char] += 1;
+	}
+	for (char in obj) {
+		if (obj[char] > frequent) {
+			frequent = obj[char];
+			freqChar = char;
+			console.log(frequent);
+		}
+	}
+	return freqChar;
 };
 
 module.exports = {
-  mostFrequentChar,
+	mostFrequentChar,
 };
