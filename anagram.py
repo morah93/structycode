@@ -24,4 +24,4 @@ def anagrams(s1, s2):
       return False
   # print(obj)
 
-  return True
+  # return True
